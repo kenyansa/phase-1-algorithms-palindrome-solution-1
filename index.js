@@ -1,11 +1,18 @@
-function isPalindrome(word) {
-  // Write your algorithm here
+function reverseString(word) {
+  const Arr = word.split("");
+  const reversedArr = Arr.reverse();
+  const reversedWord = reversedArr.join("");
+  return reversedWord;
 }
-
-/* 
-  Add your pseudocode here
-*/
-
+function isPalindrome(word) {
+  const reversedWord = reverseString(word);
+  if (word === reversedWord) {
+    return true;
+  } else {
+    return false;
+  }
+}
+isPalindrome("racecar");
 /*
   Add written explanation of your solution here
 */
